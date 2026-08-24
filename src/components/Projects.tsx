@@ -12,7 +12,8 @@ const projects = [
   { title: 'IT Service Desk', tags: ['Laravel', 'VueJs', 'MySQL', 'Ubuntu'], image: '/images/projects/servicedesk-dashboard.png', icon: '💻' },
   { title: 'Task Manager', tags: ['.NET', 'React', 'PostgreSQL', 'Material UI'], image: '/images/projects/task-manager.png', icon: '✅' },
   { title: 'Web3 Document Verifier', tags: ['Blockchain', 'Web3', 'Smart Contracts'], image: '/images/projects/document-verifier.png', icon: '🔐' },
-  { title: 'RealEstate Chain', tags: ['.NET 10', 'React 19', 'PostgreSQL', 'Solidity', 'Stripe', 'PayMongo', 'Nethereum', 'Vite'], image: '/images/projects/RealestateChain.png', icon: '🏠' }
+  { title: 'RealEstate Chain', tags: ['.NET 10', 'React 19', 'PostgreSQL', 'Solidity', 'Stripe', 'PayMongo', 'Nethereum', 'Vite'], image: '/images/projects/RealestateChain.png', icon: '🏠' },
+  { title: 'ATS Resume Platform', tags: ['React', 'TypeScript', 'Zustand', 'Vite', 'Framer Motion', 'jsPDF'], image: '/images/projects/ats-platform.png', icon: '📄', description: 'ATS resume platform with real-time resume preview, AI-assisted content generation, ATS scoring, and in-browser PDF export.' }
 ]
 
 export default function Projects() {
@@ -112,6 +113,9 @@ export default function Projects() {
                 <h3 className="text-3xl font-medieval text-[#C9B896] mb-4">
                   {projects[selectedProject].title}
                 </h3>
+                {projects[selectedProject].description && (
+                  <p className="text-medieval-parchment/80 mb-4 text-sm">{projects[selectedProject].description}</p>
+                )}
                 <div className="flex flex-wrap gap-2">
                   {projects[selectedProject].tags.map((tag) => (
                     <span key={tag} className="skill-rune">

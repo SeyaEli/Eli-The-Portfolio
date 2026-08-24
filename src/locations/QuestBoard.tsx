@@ -71,6 +71,15 @@ const projects = [
     difficulty: 'Legendary',
     ongoing: true,
   },
+  {
+    id: 'ats',
+    title: 'ATS Resume Platform',
+    desc: 'ATS resume platform with real-time resume preview, AI-assisted content generation, ATS scoring, and in-browser PDF export.',
+    tags: ['NextJs','React', 'TypeScript', 'Zustand', 'Vite', 'Framer Motion', 'jsPDF'],
+    image: '/images/projects/ats-platform.png',
+    icon: '📄',
+    difficulty: 'Epic',
+  },
 ];
 
 const difficultyColors: Record<string, { bg: string; text: string }> = {
